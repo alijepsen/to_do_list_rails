@@ -1,0 +1,27 @@
+<div class="container">
+<h1>To-Do-To-Do-To-Do</h1>
+<hr />
+
+<p>Add to your list here <i><%= link_to 'Add New', new_list_path %></i></p>
+
+  <ol>
+    <% @lists.each do |list| %>
+      <li>
+      <h4><%= list.item %></h4>
+      Description: <%= list.title %><br />
+      Priority: <b><%= list.priority %></b> <br />
+      <!--Complete: <%= list.complete %> <br />-->
+      Created by: <i><%= list.user %></i>
+      <br \><br \>
+      <%= link_to 'Show Item', list_path(list) %> |
+      <%= link_to 'Edit Item', edit_list_path(list) %> |
+      <%= link_to 'Delete Item', list, method: :delete, data: {confirm: 'Are you sure you want to delete this item?'} %>
+      <br \><br \>
+      </li>
+      <% end %>
+  </ol>
+</div>
+
+
+
+

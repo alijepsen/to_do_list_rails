@@ -1,0 +1,17 @@
+<div class="container">
+<h1>Item: <%= @list.item %> </h1>
+<hr />
+
+  <p>Item: <%= @list.item %></p>
+  <p>Description: <%= @list.title %></p>
+  <p>Created by: <%= @list.user %></p>
+  <p>Priority: <%= @list.priority %></p>
+
+
+  <%= link_to 'Back', lists_path %> |
+  <%= link_to 'Edit Item', edit_list_path(@list) %> |
+  <%= link_to 'Delete Item', @list, method: :delete, data: {confirm: 'Are you sure you want to delete this item?'} %>
+</div>
+
+
+

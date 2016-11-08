@@ -1,0 +1,48 @@
+    <%= form_for @lists do |f| %>
+    <div class="container">
+    <div class="form-group has-success">
+    <%= f.label :item%></label>
+    <%= f.text_field :item, :class => "form-control", :id => "focusedInput" %>
+    <br /><br />
+
+
+    <%= f.label :description %>
+    <%= f.text_area :title, :class => "form-control input-lg" %>
+    <br /><br />
+
+    <%= f.label :created_by %>
+    <%= f.text_field :user,:class => "form-control", :id => "focusedInput" %>
+    <br /><br />
+
+    <!--<div class="form-group">
+
+      <div class="form-group">
+        <select class="form-control" id="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>-->
+
+   <br /><br />
+   <%= f.label :complete %>
+   <%= f.check_box :complete, :class => "checkbox" %>
+
+   </div>
+
+    <br /><br />
+
+    <%= f.submit %> <!--"Submit", :class => "btn btn-success" %> <!-- f.submit %>--> <!--, 'Submit', :class => "btn btn-success" %>-->
+
+      <br /><br />
+      <%= link_to 'Back', lists_path %>
+
+    <% end %>
+
+</div>
+</div>
+
+
